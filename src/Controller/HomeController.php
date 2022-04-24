@@ -20,6 +20,12 @@ class HomeController extends AbstractController
         return $this->render('soins/traumatologie.html.twig');
     }
 
+    #[Route('/orthopedie', name: 'app_orthopedie')]
+    public function orthopedie(): Response
+    {
+        return $this->render('soins/orthopedie.html.twig');
+    }
+
     #[Route('/kinesitherapie-du-sport', name: 'app_kine_du_sport')]
     public function kinesitherapieDuSport(): Response
     {
@@ -36,17 +42,5 @@ class HomeController extends AbstractController
     public function rhumatologie(): Response
     {
         return $this->render('soins/rhumatologie.html.twig');
-    }
-
-    #[Route('/geriatrie', name: 'app_geriatrie')]
-    public function geriatrie(): Response
-    {
-        return $this->render('soins/geriatrie.html.twig');
-    }
-
-    #[Route('/neurologie', name: 'app_neurologie')]
-    public function neurologie(): Response
-    {
-        return $this->render('soins/neurologie.html.twig');
     }
 }

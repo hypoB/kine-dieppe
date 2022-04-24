@@ -94,7 +94,7 @@
   /**
    * Back to top button
    */
-  let backtotop = select('.back-to-top')
+  let backtotop = select('.top-button')
   if (backtotop) {
     const toggleBacktotop = () => {
       if (window.scrollY > 100) {

@@ -3,16 +3,17 @@
 {#    {{ dump(app.request.uri, path('app_home') ) }}#}
     <div class="container d-flex align-items-center">
 
-{#      <a href="{{ path('app_home') }}" class="logo me-auto"><img src="assets/img/logo.png" alt=""></a>#}
+      <a href="{{ path('app_home') }}" class="logo me-auto"><img src="assets/img/logo.png" alt="CKS Dieppe" title="CKS Dieppe"></a>
       <!-- Uncomment below if you prefer to use an image logo -->
-      <h1 class="logo me-auto"><a href="{{ path('app_home') }}">CKS Dieppe</a></h1>
+{#      <h1 class="logo me-auto"><a href="{{ path('app_home') }}">CKS Dieppe</a></h1>#}
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a class="nav-link scrollto " href="{{ path('app_home') }}#about">&Agrave; propos</a></li>
-          <li><a class="nav-link scrollto" href="{{ path('app_home') }}#doctors">Les praticiens</a></li>
+          <li><a class="nav-link scrollto" href="{{ path('app_home') }}#praticiens">Les praticiens</a></li>
           <li><a class="nav-link scrollto" href="{{ path('app_home') }}#services">Les traitements</a></li>
-          <li><a class="nav-link scrollto" href="{{ path('app_home') }}#actus">Actualités</a></li>
+{#          <li><a class="nav-link scrollto" href="{{ path('app_home') }}#actus">Actualités</a></li>#}
+          <li><a class="nav-link scrollto" href="{{ path('app_home') }}#offres">Stages</a></li>
           <li><a class="nav-link scrollto" href="{{ path('app_home') }}#contact">Nous trouver</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
