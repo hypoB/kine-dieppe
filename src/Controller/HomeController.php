@@ -14,23 +14,39 @@ class HomeController extends AbstractController
         return $this->render('home/index.html.twig');
     }
 
-    #[Route('/centre', name: 'app_centre')]
-    public function centre(): Response
-    {
-        return $this->render('home/centre.html.twig');
-    }
-
-    #[Route('/equipe', name: 'app_equipe')]
-    public function equipe(): Response
-    {
-        return $this->render('home/equipe.html.twig');
-    }
-
     #[Route('/traumatologie', name: 'app_traumatologie')]
     public function traumatologie(): Response
     {
-        return $this->render('home/traumatologie.html.twig');
+        return $this->render('soins/traumatologie.html.twig');
     }
 
+    #[Route('/kinesitherapie-du-sport', name: 'app_kine_du_sport')]
+    public function kinesitherapieDuSport(): Response
+    {
+        return $this->render('soins/kinesitherapie-du-sport.html.twig');
+    }
 
+    #[Route('/rehabilitation-cardio-respiratoire', name: 'app_rehabilitation_cardio_respiratoire')]
+    public function rehabilitationCardioRespiratoire(): Response
+    {
+        return $this->render('soins/rehabilitation-cardio-respiratoire.html.twig');
+    }
+
+    #[Route('/rhumatologie', name: 'app_rhumatologie')]
+    public function rhumatologie(): Response
+    {
+        return $this->render('soins/rhumatologie.html.twig');
+    }
+
+    #[Route('/geriatrie', name: 'app_geriatrie')]
+    public function geriatrie(): Response
+    {
+        return $this->render('soins/geriatrie.html.twig');
+    }
+
+    #[Route('/neurologie', name: 'app_neurologie')]
+    public function neurologie(): Response
+    {
+        return $this->render('soins/neurologie.html.twig');
+    }
 }
