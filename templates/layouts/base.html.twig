@@ -1,21 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
-            <meta charset="utf-8">
-            <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <title>{% block title %}Centre Kiné Sport Dieppe{% endblock %}</title>
 
-            <meta content="" name="description">
-            <meta content="" name="keywords">
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-            {# Favicons #}
-            <link href="assets/img/favicon.png" rel="icon">
-            <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+        <meta name="description"
+              content="Le centre kiné sport Dieppe propose un ensemble de soins thérapeutiques conventionnés dans un cadre privilégié pour la kinésithérapie et la masso-kinésithérapie (physiotherapy).">
 
-            {# Google Fonts #}
-            <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+        <link rel="canonical" href="https://cks-dieppe.fr/"/>
 
-        <title>{% block title %}Centre Kine Sport Dieppe{% endblock %}</title>
-        
+        {# Favicons #}
+        <link href="assets/cks-dieppe.ico" rel="icon">
+        <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+        {# Google Fonts #}
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://cks-dieppe.fr/">
+        <meta property="og:title" content="Centre Kiné Sport Dieppe - Accueil">
+        <meta property="og:description" content="Le cabinet propose un ensemble de soins thérapeutiques conventionnés dans un cadre privilégié pour la masso-kinésithérapie (physiotherapy).">
+        <meta property="og:image" content="">
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="https://cks-dieppe.fr/">
+        <meta property="twitter:title" content="Centre Kiné Sport Dieppe - Accueil">
+        <meta property="twitter:description" content="Le cabinet propose un ensemble de soins thérapeutiques conventionnés dans un cadre privilégié pour la masso-kinésithérapie (physiotherapy).">
+        <meta property="twitter:image" content="">
+
+
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
             <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">

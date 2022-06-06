@@ -8,37 +8,49 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class HomeController extends AbstractController
 {
-    #[Route('/', name: 'app_home')]
+    /**
+     * @Route("/", name="app_home")
+     */
     public function index(): Response
     {
         return $this->render('home/index.html.twig');
     }
 
-    #[Route('/traumatologie', name: 'app_traumatologie')]
+    /**
+     * @Route("/traumatologie", name="app_traumatologie")
+     */
     public function traumatologie(): Response
     {
         return $this->render('soins/traumatologie.html.twig');
     }
 
-    #[Route('/orthopedie', name: 'app_orthopedie')]
+    /**
+     * @Route("/orthopedie", name="app_orthopedie")
+     */
     public function orthopedie(): Response
     {
         return $this->render('soins/orthopedie.html.twig');
     }
 
-    #[Route('/kinesitherapie-du-sport', name: 'app_kine_du_sport')]
+    /**
+     * @Route("/kinesitherapie-du-sport", name="app_kine_du_sport")
+     */
     public function kinesitherapieDuSport(): Response
     {
         return $this->render('soins/kinesitherapie-du-sport.html.twig');
     }
 
-    #[Route('/rehabilitation-cardio-respiratoire', name: 'app_rehabilitation_cardio_respiratoire')]
+    /**
+     * @Route("/rehabilitation-cardio-respiratoire", name="app_rehabilitation_cardio_respiratoire")
+     */
     public function rehabilitationCardioRespiratoire(): Response
     {
         return $this->render('soins/rehabilitation-cardio-respiratoire.html.twig');
     }
 
-    #[Route('/rhumatologie', name: 'app_rhumatologie')]
+    /**
+     * @Route("/rhumatologie", name="app_rhumatologie")
+     */
     public function rhumatologie(): Response
     {
         return $this->render('soins/rhumatologie.html.twig');
