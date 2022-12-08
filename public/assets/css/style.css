@@ -1070,7 +1070,8 @@ section.contact {
 .youtube-video-container {
   position: relative;
   overflow: hidden;
-  width: 100%;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .youtube-video-container::after {
