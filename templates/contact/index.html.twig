@@ -1,0 +1,92 @@
+
+{% extends 'layouts/base.html.twig' %}
+
+{% block title %}Centre Kiné Sport Dieppe - Price de rendez-vous{% endblock %}
+
+{% block body %}
+
+    {% if sended %}
+        <div class="alert alert-success" role="alert">
+            Votre demande de rendez-vous a bien été envoyée. Nous vous contacterons dans les plus brefs délais.
+        </div>
+    {% endif %}
+    <section id="about-contact"
+             class="about a-propos"
+             style="padding-top: 150px;">
+        <div class="container" data-aos="fade-up">
+            <div class="section-title contact">
+                <h2>Prendre rendez-vous pour une consultation au cabinet</h2>
+                <p>
+                    <strong>Avant de compléter le formulaire de demande de rendez-vous en ligne ci-dessous, ou de nous appeler
+                        pour prendre rendez-vous au 02 35 86 03 25, merci de lire les informations suivantes :</strong> <br><br>
+                    Les séances de kinésithérapie ont lieu <strong>uniquement sur rendez-vous.</strong> <br><br>
+                    Adresse du cabinet: <strong>32 rue Louis Blériot 76370 Dieppe</strong> <br><br>
+                    Notre cabinet étant très sollicité au téléphone tous les jours, Si vous choisissez de nous appeler
+                    pour prendre rdv (il est inutile de doubler votre demande par téléphone et par le formulaire ci-
+                    dessous, une seule demande suffit), merci de nous laisser un message vocal sur le répondeur en
+                    indiquant: <br><br>
+                </p>
+                <ul>
+                    <li>votre nom</li>
+                    <li>le motif de votre demande de consultation (indiquez le problème de santé ou le contenu
+                        de la prescription du médecin)</li>
+                    <li>votre numéro de téléphone</li>
+                    <li>vos horaires de disponibilité pour venir en rendez-vous pour vos soins</li>
+                </ul>
+                <p>
+                    Grâce à ces informations, nous serons d’autant plus efficaces pour vous proposer un rendez-
+                    vous répondant à vos attentes en retour. Nous vous remercions d’avance de votre
+                    compréhension.
+                </p>
+                <p>
+                    Si vous préférez prendre rdv par internet, nous vous invitons à compléter le formulaire ci-
+                    dessous.
+                </p>
+                <p>
+                    Une fois le formulaire envoyé OU le message vocal laissé sur notre répondeur, (ne surchargez
+                    pas notre secrétariat deux fois) vous serez rapidement recontacté par un kinésithérapeute si
+                    nous sommes en mesure de vous proposer un premier rdv dans les jours à venir.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    {% if not sended %}
+        {% form_theme contactForm 'theme/form_theme_layout.html.twig' %}
+        <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact par mail</h2>
+                <p>
+                    <strong>Communiquez nous le maximum d’informations possible afin que nous puissions rapidement
+                        évaluer votre demande et la compatibilité avec les places disponibles dans nos agendas.</strong>
+                </p>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-lg-9">
+                    {{ form_start(contactForm, {'class': "php-email-form"}) }}
+                    <div class="row">
+                        {{ form_errors(contactForm) }}
+                    </div>
+
+                    <div class="row form-group">
+                        {{ form_row(contactForm.civilite) }}
+                        {{ form_row(contactForm.name) }}
+                        {{ form_row(contactForm.email_contact) }}
+                        {{ form_row(contactForm.telephone) }}
+                        {{ form_row(contactForm.raison) }}
+                        {{ form_row(contactForm.avec) }}
+                        {{ form_row(contactForm.disponibilite) }}
+                        {{ form_row(contactForm.description) }}
+                        {{ form_row(contactForm.charges) }}
+                    </div>
+
+                    {{ form_end(contactForm) }}
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endif %}
+
+{% endblock %}

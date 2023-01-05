@@ -151,6 +151,31 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/**
+* Appointment Button
+*/
+.appointment-btn {
+  margin-left: 25px;
+  background: #3fbbc0;
+  color: #fff;
+  border-radius: 4px;
+  padding: 8px 25px;
+  white-space: nowrap;
+  transition: 0.3s;
+  font-size: 14px;
+  display: inline-block;
+}
+.appointment-btn:hover {
+  background: #65c9cd;
+  color: #fff;
+}
+@media (max-width: 768px) {
+  .appointment-btn {
+    margin: 0 15px 0 0;
+    padding: 6px 15px;
+  }
+}
+
 /* Rendez-vous Button */
 .rdv-btn {
   margin-left: 25px;
@@ -172,6 +197,14 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 15px 0 0;
     padding: 6px 15px;
   }
+}
+
+.alert {
+  z-index:998;
+  position:fixed;
+  top:10px;
+  left:10px;
+  width: 50%;
 }
 
 /* Nav */
@@ -507,7 +540,6 @@ section.contact {
   font-size: 28px;
   font-weight: 700;
 }
-
 .offres .offres-btn {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
@@ -521,7 +553,6 @@ section.contact {
   border: 2px solid #fff;
   color: #fff;
 }
-
 .offres .offres-btn:hover {
   background: #fff;
   color: #4fbcc1;
@@ -945,6 +976,31 @@ section.contact {
   }
 }
 
+.section-title.contact {
+  text-align: left;
+}
+/*
+Formulaire de prise de rendez-vous
+*/
+fieldset.form-group {
+  margin-bottom: 20px;
+}
+.form-error-icon {
+  display:none;
+}
+/*.contact input[type=radio] {*/
+/*  margin: 0 2px 0 5px;*/
+/*}*/
+/*.contact .form-group div {*/
+/*  margin-bottom: 10px;*/
+/*}*/
+/*.description label{*/
+/*  display: block;*/
+/*}*/
+/*.description textarea{*/
+/*  width: 100%;*/
+/*}*/
+
 /* Footer */
 #footer {
   background: #eeeeee;
@@ -1073,17 +1129,20 @@ section.contact {
   width: 80%;
   margin: 0 auto;
 }
-
 .youtube-video-container::after {
   display: block;
   content: "";
   padding-top: 56.25%;
 }
-
 .youtube-video-container iframe {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+#copyright {
+  margin-top: 20px;
+  text-align: center;
 }

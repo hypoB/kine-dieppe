@@ -1,0 +1,26 @@
+{# templates/emails/signup.html.twig #}
+<h1>Demande de rendez-vous: </h1>
+
+<p>
+    <i>Civilité:</i> {{ civilite }}<br>
+    <i>Nom:</i> {{ name }}<br>
+    <i>Email:</i> {{ email_contact  }}<br>
+    <i>Téléphone:</i> {{ telephone }}<br>
+    <i>Motif:</i> {{ raison }}<br>
+    <i>Choix du soignant:</i> {{ avec }}<br>
+    <i>Disponibilité:</i>
+<ul>
+    {% for key, dispo in disponibilite %}
+        <li>{{disponibilite[key]}}</li>
+    {% endfor %}
+</ul>
+    <br><br>
+    <i>Description:</i><br> {{ description }}<br><br>
+    <i>Charge spéciale:</i><br>
+<ul>
+    {% for key, charge in charges %}
+        <li>{{charges[key]}}</li>
+    {% endfor %}
+</ul>
+<br>
+</p>
